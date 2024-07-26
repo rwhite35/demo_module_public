@@ -1,0 +1,4 @@
+#!/bin/sh
+# set the from header field
+export REPLYTO=avgjoe@acme.com
+echo "Testing Email from container." | mail -s "Email Test" -c avrjoe@acme.com

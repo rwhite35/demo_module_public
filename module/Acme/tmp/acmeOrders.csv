@@ -1,0 +1,20 @@
+1140342,83,confirm,2018-06-11 08:00:00,(null),H4x0r Operating Corporation,H4x0r_Route_Guide
+1141089,24,confirm,2018-06-12 12:16:00,(null),Sk80r,Sk80r_Route_Guide
+1141139,24,confirm,2018-06-13 13:00:00,(null),Sk80r,Sk80r_Route_Guide
+1142053,24,manual,2018-06-26 08:00:00,(null),Sk80r,Sk80r_Route_Guide
+1142054,24,manual,2018-06-26 08:00:00,(null),Sk80r,Sk80r_Route_Guide
+1142055,24,manual,2018-06-26 08:00:00,(null),Sk80r,Sk80r_Route_Guide
+1137341,2,confirm,2018-06-04 14:00:00,(null),E5C4P3,CPE_Route_Guide
+1138167,2,confirm,2018-06-05 13:19:00,(null),E5C4P3,CPE_Route_Guide
+1139386,2,confirm,2018-06-09 15:00:00,(null),E5C4P3,CPE_Route_Guide
+1139484,2,call_acme,2018-06-10 07:16:00,(null),E5C4P3,CPE_Route_Guide
+1138880,27,confirm,2018-06-06 17:00:00,(null),cDc Emergency,cDcEmergency_Route_Guide
+1140690,27,confirm,2018-06-11 16:00:00,(null),cDc Emergency,cDcEmergency_Route_Guide
+999594,27,call_acme,2018-06-13 03:00:00,(null),cDc Emergency,cDcEmergency_Route_Guide
+1140508,27,confirm,2018-06-23 00:00:00,(null),cDc Emergency,cDcEmergency_Route_Guide
+1140012,17,confirm,2018-06-10 15:17:00,(null),DIY Engine,DIY_Route_Guide
+1140815,17,confirm,2018-06-12 07:00:00,(null),DIY Engine,DIY_Route_Guide
+1141248,17,confirm,2018-06-12 16:00:00,(null),DIY Engine,DIY_Route_Guide
+1142021,17,locations,2018-06-23 09:03:00,(null),DIY Engine,DIY_Route_Guide
+1142784,17,confirm,2018-05-02 11:00:00,(null),DIY Engine,DIY_Route_Guide
+order_id,client_id,rgo_status,rgo_pickup_date,rgo_delivery_date,client_name,client_route_guide_class
