@@ -18,12 +18,12 @@ namespace Acme;
  * example: {"access_token":"9127...9cf1","expires_in":7200,"token_type":"Bearer","scope":"oauth"}
  */
 
-use Zend\Crypt\Password\Bcrypt;
-use Zend\EventManager\EventManager;
-use ZF\ApiProblem\ApiProblemResponse;
-use ZF\ApiProblem\Exception\DomainException;
-use ZF\Configuration\ConfigResource;
-use Zend\Config\Writer\WriterInterface as ConfigWriter;
+use Laminas\Crypt\Password\Bcrypt;
+use Laminas\EventManager\EventManager;
+use Laminas\ApiTools\ApiProblem\ApiProblemResponse;
+use Laminas\ApiTools\ApiProblem\Exception\DomainException;
+use Laminas\ApiTools\Configuration\ConfigResource;
+use Laminas\Config\Writer\WriterInterface as ConfigWriter;
 use DateTime;
 
 class CurlAPI

@@ -1,7 +1,7 @@
 <?php
 namespace Acme;
-use Zend\Db\Adapter\AdapterAbstractServiceFactory;
-// use Zend\Db\Adapter\AdapterAbstractServiceFactoryTest;
+use Laminas\Db\Adapter\AdapterAbstractServiceFactory;
+// use Laminas\Db\Adapter\AdapterAbstractServiceFactoryTest;
 
 /**
  * Demo Module configurations defined in global scope.  

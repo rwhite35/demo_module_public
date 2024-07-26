@@ -2,8 +2,8 @@
 namespace Acme;
 
 use DomainException;
-use Zend\Config\Writer\PhpArray as ConfigWriter;
-use ZF\Configuration\ConfigResource;
+use Laminas\Config\Writer\PhpArray as ConfigWriter;
+use Laminas\ApiTools\Configuration\ConfigResource;
 
 /**
  * Service factory for the ArrayMapper
@@ -13,7 +13,7 @@ use ZF\Configuration\ConfigResource;
  * to a valid filesystem path of a PHP file that will return an array.
  *
  * Passes the data from the file, the path to the file, and a PhpArray config
- * writer to a ZF\Configuration\ConfigResource instance, and passes the data
+ * writer to a Laminas\ApiTools\Configuration\ConfigResource instance, and passes the data
  * and the ConfigResource instance to the ArrayMapper.
  */
 class ArrayMapperFactory

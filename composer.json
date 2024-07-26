@@ -1,0 +1,25 @@
+{
+    "name": "ronwhite/demo.module.com",
+    "description": "demo module implementing laminas framework for ETL capabilities",
+    "type": "library",
+    "require": {
+        "laminas/laminas-hydrator": "^2.4",
+        "laminas/laminas-session": "^2.9",
+        "laminas/laminas-dependency-plugin": "^1.0"
+    },
+    "require-dev": {
+        "laminas/laminas-log": "^2.12"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "module/demo.module.com/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ronwhite562",
+            "email": "ronwhite562@gmail.com"
+        }
+    ]
+}

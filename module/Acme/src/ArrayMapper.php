@@ -25,17 +25,17 @@ namespace Acme;
 use DomainException;
 use InvalidArgumentException;
 use Traversable;
-use Zend\Stdlib\ArrayUtils;
-use Zend\Hydrator\ObjectProperty as ObjectPropertyHydrator;
-use ZF\Configuration\ConfigResource;
+use Laminas\Stdlib\ArrayUtils;
+use Laminas\Hydrator\ObjectProperty as ObjectPropertyHydrator;
+use Laminas\ApiTools\Configuration\ConfigResource;
 use DateTime;
 
 // Acme Utilities
 use Acme\MapperInterface;
 use phpDocumentor\Reflection\Types\Object_;
-use Zend\Validator\Barcode\Identcode;
-use Zend\Db\Adapter\Driver\IbmDb2\IbmDb2;
-use Zend\ComponentInstaller\Collection;
+use Laminas\Validator\Barcode\Identcode;
+use Laminas\Db\Adapter\Driver\IbmDb2\IbmDb2;
+use Laminas\ComponentInstaller\Collection;
 
 /**
  * Mapper implementation using a file returning PHP arrays
