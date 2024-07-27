@@ -2,24 +2,29 @@
     "name": "ronwhite/demo.module.com",
     "description": "demo module implementing laminas framework for ETL capabilities",
     "type": "library",
+    "license": "MIT",
+    "config": {
+        "process-timeout": 5000
+    },
+    "minimum-stability": "dev",
     "require": {
+        "php": "^7.0 || ^8.0",
         "laminas/laminas-hydrator": "^2.4",
         "laminas/laminas-session": "^2.9",
-        "laminas/laminas-dependency-plugin": "^1.0"
+        "laminas/laminas-dependency-plugin": "^1.0",
+	    "laminas/laminas-stdlib": "^3.2"
     },
     "require-dev": {
         "laminas/laminas-log": "^2.12"
     },
-    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Acme\\": "module/demo.module.com/src/"
         }
     },
-    "authors": [
-        {
-            "name": "ronwhite562",
-            "email": "ronwhite562@gmail.com"
-        }
-    ]
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "serve": "php -S 0.0.0.0:8080 -t public/"
+    }
 }
