@@ -33,7 +33,7 @@ The following is a reference for how the projects VirtualHost was configured.  V
 </VirtualHost>
 ```
 
-Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows it’s usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor with read/write permissions.
+Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows it's usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor with read/write permissions.
 
 ```bash
 127.0.0.1 demo.acme.com
@@ -41,7 +41,7 @@ Additionally, it may be necessary to add an entry in the servers `hosts` file. O
 
 ### .htaccess File
 
-Laminas MVC along with ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and other artifacts that have been defined in the `route stack` object. The route stack is a merged set of individual `routes` collated from each resources’ 'module.config.php` file. 
+Laminas MVC along with ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and other artifacts that have been defined in the `route stack` object. The route stack is a merged set of individual `routes` collated from each resources `module.config.php` file. 
 
 1. Confirm Apache (usually in httpd.conf) has enabled rewrite module
 ..* LoadModule rewrite_module modules/mod_rewrite.so
