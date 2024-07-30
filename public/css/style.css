@@ -1,0 +1,14 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.zf-green {
+    color: #68b604;
+}
+
+div.container a.navbar-brand > img {
+    display: inline;
+    margin-right: 4px;
+    margin-top: -2px;
+}

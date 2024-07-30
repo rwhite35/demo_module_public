@@ -3,7 +3,7 @@ namespace Acme;
 
 /**
  * Paginated API transaction data (by Acme Access Token)
- * Uses specialized Zend\Paginator\Adapter\ArrayAdapter 
+ * Uses specialized Laminas\Paginator\Adapter\ArrayAdapter 
  * instance for returning request input.
  *
  * Take the transaction data and hydrated an array.
@@ -13,8 +13,8 @@ namespace Acme;
  */
 
 use stdClass;
-use Zend\Paginator\Adapter\ArrayAdapter as ArrayPaginator;
-use Zend\Hydrator\HydratorInterface;
+use Laminas\Paginator\Adapter\ArrayAdapter as ArrayPaginator;
+use Laminas\Hydrator\HydratorInterface;
 
 class HydratingArrayPaginator extends ArrayPaginator
 {

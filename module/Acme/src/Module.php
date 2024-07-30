@@ -1,20 +1,22 @@
 <?php
 namespace Acme;
 /**
- * Acme Utilties module
- * This file is required for Autoloader
- * 
- * Define any global functions for Acme\Utilities
+ * Acme module
+ * This file is `main` and loaded by Autoloader 
+ * using path ./module/Acme/src/Module.php.
+ * - loads configuration and required dependencies. 
  */
-class Module
+use Laminas\ModuleManager\Feature\ConfigProviderInterface;
+
+class Module implements ConfigProviderInterface
 {
     /**
      * @method getConfig()
-     * @return array this modules configurations
+     * @return array this modules configuration file
      */
     public function getConfig()
     {
-        return include __DIR__ . '/config/module.config.php';
+        return include __DIR__ . '/../config/module.config.php';
     }
     
 }

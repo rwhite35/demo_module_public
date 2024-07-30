@@ -14,10 +14,10 @@ namespace Acme;
  * @copyright Copyright (c) 2014-2018 Zend Technologies USA Inc. (http://www.zend.com)
  */
 
-use Zend\Db\Adapter\AdapterInterface;
-use Zend\Db\ResultSet\HydratingResultSet;
-use Zend\Db\TableGateway\TableGateway as ZFTableGateway;
-use Zend\Hydrator\ObjectProperty as ObjectPropertyHydrator;
+use Laminas\Db\Adapter\AdapterInterface;
+use Laminas\Db\ResultSet\HydratingResultSet;
+use Laminas\Db\TableGateway\TableGateway as ZFTableGateway;
+use Laminas\Hydrator\ObjectProperty as ObjectPropertyHydrator;
 
 class TableGateway extends ZFTableGateway
 {

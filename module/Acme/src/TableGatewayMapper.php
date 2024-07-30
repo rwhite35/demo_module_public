@@ -15,13 +15,13 @@ namespace Acme;
 use DomainException;
 use InvalidArgumentException;
 use Traversable;
-use Zend\Paginator\Adapter\DbTableGateway;
-use Zend\Stdlib\ArrayUtils;
-use ZF\Apigility\Admin\InputFilter\CreateContentNegotiationInputFilter;
+use Laminas\Paginator\Adapter\DbTableGateway;
+use Laminas\Stdlib\ArrayUtils;
+use Laminas\ApiTools\Admin\InputFilter\CreateContentNegotiationInputFilter;
 use ZendBench\ServiceManager\FetchCachedServicesBench;
 
 /**
- * Mapper implementation using a Zend\Db\TableGateway
+ * Mapper implementation using a Laminas\Db\TableGateway
  */
 class TableGatewayMapper implements MapperInterface
 {

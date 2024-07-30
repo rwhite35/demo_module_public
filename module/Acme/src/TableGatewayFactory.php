@@ -1,7 +1,7 @@
 <?php
 namespace Acme;
 /**
- * Instantiates TableGateway as an instance of Zend\Db\Adapter\Adapter
+ * Instantiates TableGateway as an instance of Laminas\Db\Adapter\Adapter
  * The min. fields for Adapter are driver, database, username and password.
  * 
  * @license   http://opensource.org/licenses/BSD-3-Clause BSD-3-Clause
@@ -9,7 +9,7 @@ namespace Acme;
  */
 
 use DomainException;
-use ZF\Configuration\ConfigResource;
+use Laminas\ApiTools\Configuration\ConfigResource;
 
 class TableGatewayFactory
 {
