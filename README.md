@@ -1,10 +1,10 @@
 # Example ETL Project
 
-ETL automation example using PHP, Laminas Framework Components and Server system resources for asynchronous data processing.
+An ETL automation example using PHP, [Laminas Framework](https://getlaminas.org/), and asynchronous server side data processing.
 
 ## Project Overview
 
-This project is an example of a capability often requested for enterprise software projects.  It provides Extract Transform and Load(ETL) processing to import data and transforms it into actionable business intelligence, customer engagement insights, and back-office operation. While not a complete feature, it does lay the ground work for extending the code base to full-featured ETL module that could bolt onto another Laminas project. Think of it as an ETL `starter kit`. 
+This project is an example of a capability often requested for enterprise software projects.  It provides `Extract Transform and Load`(ETL) processing for import data to transform it into actionable business intelligence, customer engagement insights, and back-office operation. While not a complete feature, it does provide the plumbing for a full-featured ETL module that could bolt onto another Laminas project. Think of it as an ETL starter kit or at least a learning path. 
 
 ## MVC Architecture
 
@@ -12,11 +12,11 @@ The project is based on Model-View-Controller(MVC) architecture and implements [
 
 ## Prerequisites & Setup
 
-The project was created for demonstration purpose and configured to serve from an instance of [Apache2](https://httpd.apache.org/) with a configured VirtualHost.  It can be deployed on a container(Docker), cloud service(AWS) or dedicated web servers.  The following outlines some basic configuration before installing and running the project locally.
+This code base was created for demonstration purpose and configured to serve from an instance of [Apache2](https://httpd.apache.org/) running localhost with a configured VirtualHost.  It can however be deployed on containers(Docker), cloud services(AWS) or dedicated web servers.  The following outlines some basic configuration before installing and running the project locally.
 
 ### VirtualHost
 
-This assumes Apache is already installed and accessible for local development. To that end, the following is a reference for how the projects VirtualHost was configured.  Values can be changed, but ServerName should match the root directory this project is running under.  The URL to load the project would be `http://demo.acme.com/public` if everything is correctly configured.
+The following is a reference for how the projects VirtualHost was configured.  Values can be changed, but the ServerName should match the root directory that the project is running under.  In this example the URL to load the project would be `http://demo.acme.com:8888/public`.
 
 ```apache
 <VirtualHost *:8888>
@@ -33,7 +33,7 @@ This assumes Apache is already installed and accessible for local development. T
 </VirtualHost>
 ```
 
-Additionally, it will be necessary to add an entry in the localhost `hosts` file. On Mac that file is `/etc/hosts`, and for Windows its usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor, this will load the above URL.
+Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows its usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor to load the above URL.
 
 ```bash
 127.0.0.1 demo.acme.com
@@ -41,15 +41,15 @@ Additionally, it will be necessary to add an entry in the localhost `hosts` file
 
 ### .htaccess File
 
-Laminas MVC along with its ModuleManager and ServiceManager uses Configuration Management to dynamically load views, controllers and artifacts that have been defined in the Router's `route stack`. The route stack is a merged `routes` object collated from each resources 'module.config.php` file.  There are a couple configurations that are required to support dynamic autoloading. 
+Laminas MVC along with its ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and artifacts that have been defined in a `route stack` object. The route stack is a merged set of `routes`, collated from each resources 'module.config.php` file.  There are a couple additional configurations required to support dynamic autoloading. 
 
-1. Confirm Apache has enabled rewrite module
+1. Confirm Apache (usually in httpd.conf) has enabled rewrite module
 ..* LoadModule rewrite_module modules/mod_rewrite.so
 
 2. Confirm Apache has enabled Access File
 ..* AccessFileName .htaccess
 
-3. Add the following directives to the an .htaccess file under public/ directory
+3. Add the following directives to the an .htaccess file under any public/ directory that's comfigured for autoloading
 
 ```bash
 RewriteEngine On
@@ -67,6 +67,39 @@ Header set Access-Control-Allow-Methods: "GET"
 ```
 
 For more details on the above access file, see [Apache How-To htaccess](https://httpd.apache.org/docs/current/howto/htaccess.html)
+For more details on Autoloading, see [Laminas Autoloader](https://docs.laminas.dev/laminas-modulemanager/module-autoloader/)
+
+
+## Composer Package Manager and Autoloading
+
+The final configuration task initializes the project and installs the framework components using Composer package manager. Dependencies are defined in a `composer.json` file which is not included in this repo. However the required dependencies are listed below. This way another package dependency solution can be cleanly install without Composer artifacts.  To walk through installing this project using Composer, refer to [Composer Basic Usage](https://getcomposer.org/doc/01-basic-usage.md).
+
+1. Laminas & PHP Dependencies
+
+```bash
+"php": "~7.1.20 || ~7.2.8",
+"laminas/laminas-session": "2.9.x-dev",
+"laminas/laminas-hydrator": "^2.4",
+"laminas/laminas-modulemanager": "^2.9",
+"laminas/laminas-servicemanager": "3.5.x-dev",
+"laminas/laminas-mvc": "3.1.x-dev",
+"laminas/laminas-http": "2.13.x-dev",
+"psr/container": "^1.0"
+```
+
+The above should copy/paste into the `compose.json` files "require": {...} node.
+
+2. Composer Autoloading
+..* Add the following to `composer.json` if using Composer's autoload feature
+
+```bash
+"psr-4": { "Acme\\": "module/Acme/src/" }
+```
+
+The above should copy/paste into the `composer.json` files "autoload": {...} node.
+
+
+## References
 
 
 
