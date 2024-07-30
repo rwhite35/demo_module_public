@@ -1,13 +1,14 @@
 <?php
 /**
- * put application specific configurations here
+ * Application specific configurations
+ * detemines which root level dirs to use
 */
 return [
     'modules' => require __DIR__ . '/modules.config.php', // list of modules
     'module_listener_options' => [
         'module_paths' => [
             './module',
-            '.vendor',
+            './vendor',
         ],
 
         'config_glob_paths' => [
@@ -41,7 +42,7 @@ return [
     // ],
 
     // Initial configuration with which to seed the ServiceManager.
-    // Should be compatible with Zend\ServiceManager\Config.
+    // Should be compatible with Laminas\ServiceManager\Config.
     // 'service_manager' => [],
 
 ];

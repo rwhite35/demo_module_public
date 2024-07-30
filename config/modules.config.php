@@ -9,5 +9,7 @@
 return [
     'Laminas\Session',
     'Laminas\Hydrator',
+    'Laminas\Router',
+    'Application',
     'Acme',
 ];

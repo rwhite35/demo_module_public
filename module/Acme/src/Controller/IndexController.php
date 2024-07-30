@@ -6,10 +6,10 @@ use Laminas\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    // URL http://localhost:8888/acme 
+    // URL http://demo.acme.com:8888/acme_public 
     // maps to Acme\Controller\IndexController::indexAction function
     public function indexAction() {
-
+        print("Acme IndexController working...");
     }
     public function addAction() {
 

@@ -5,6 +5,7 @@ namespace Acme;
  * these values overload values defined in local.global.php
  * when running in this modules context.
  */
+use Zend\Router\Http\Literal;
 use Laminas\Router\Http\Segment;
 use Laminas\ServiceManager\Factory\InvokableFactory;
 
@@ -18,7 +19,7 @@ return [
             \Acme\TableGatewayMapper::class => \Acme\TableGatewayMapperFactory::class,
             
             // Acme Utilities database adapter
-            'AcmeDb' => AdapterAbstractServiceFactory::class,
+            // 'AcmeDb' => AdapterAbstractServiceFactory::class,
         ]
     ],
 
@@ -37,14 +38,10 @@ return [
     // constraints: `id` only matches 0-9, `action` matches alphanumerics.
     'router' => [
         'routes' => [
-            'index' => [
-                'type' => Segment::class,
+            'acme' => [
+                'type' => Literal::class,
                 'options' => [
-                    'route' => '/index[/:action[/:id]]',
-                    'constraints' => [
-                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id' => '[0-9]+',
-                    ],
+                    'route' => '/',
                     'defaults' => [
                         'controller' => Controller\IndexController::class,
                         'action' => 'index',
@@ -55,6 +52,19 @@ return [
     ],
 
     'view_manager' => [
+        'doctype'                  => 'HTML5',
+        'display_not_found_reason' => false,
+        'display_exceptions'       => false,
+        // 'not_found_template'       => 'error/404',
+        // 'exception_template'       => 'error/index',
+
+        // layout/layout is common for all modules
+        'template_map' => [
+            // 'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
+            // 'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
+            // 'error/404'               => __DIR__ . '/../view/error/404.phtml',
+            // 'error/index'             => __DIR__ . '/../view/error/index.phtml',
+        ],
         'template_path_stack' => [
             'acme' => __DIR__ . '/../view',
         ],
