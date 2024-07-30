@@ -4,19 +4,19 @@ An ETL automation example using PHP, [Laminas Framework](https://getlaminas.org/
 
 ## Project Overview
 
-This project is an example of a capability often requested for enterprise software projects.  It provides `Extract Transform and Load`(ETL) processing for import data to transform it into actionable business intelligence, customer engagement insights, and back-office operation. While not a complete feature, it does provide the plumbing for a full-featured ETL module that could bolt onto another Laminas project. Think of it as an ETL starter kit or at least a learning path. 
+This project is an example of a capability often requested for enterprise software projects.  It provides `Extract Transform and Load`(ETL) processing for import data, transforming it into actionable business intelligence, customer engagement insights, and back-office operation. While not a complete feature, it does provide the plumbing for a full-featured ETL module that could bolt onto other solutions.
 
 ## MVC Architecture
 
-The project is based on Model-View-Controller(MVC) architecture and implements [Laminas MVC](https://docs.laminas.dev/mvc/) framework (among others). It leverages abstraction, dependency injection, dynamic routing & autoload, and database integration to demonstrate an ETL Proof-of-Concept. MVC ensures `separation of concern` and promotes clean code resulting in stable operation and feature logevity.
+The project is based on a Model-View-Controller(MVC) architecture and implements [Laminas MVC](https://docs.laminas.dev/mvc/) framework (among others)to leverages abstraction, dependency injection, dynamic routing & autoload. MVC ensures `separation of concern` and promotes clean code resulting in stable operation and feature/code logevity.
 
 ## Prerequisites & Setup
 
-This code base was created for demonstration purpose and configured to serve from an instance of [Apache2](https://httpd.apache.org/) running localhost with a configured VirtualHost.  It can however be deployed on containers(Docker), cloud services(AWS) or dedicated web servers.  The following outlines some basic configuration before installing and running the project locally.
+This project was created for demonstration purpose and configured to serve from an instance of [Apache2](https://httpd.apache.org/) running localhost with a configured VirtualHost.  It can however be deployed from containers(Docker), cloud services(AWS) or dedicated web servers.  The following outlines some basic configuration in order install and run the project locally.
 
 ### VirtualHost
 
-The following is a reference for how the projects VirtualHost was configured.  Values can be changed, but the ServerName should match the root directory that the project is running under.  In this example the URL to load the project would be `http://demo.acme.com:8888/public`.
+The following is a reference for how the projects VirtualHost was configured.  Values can change, but the ServerName should match the root directory that the project is running under.  The URL `http://demo.acme.com:8888/public` should load the project if correctly configured.
 
 ```apache
 <VirtualHost *:8888>
@@ -33,7 +33,7 @@ The following is a reference for how the projects VirtualHost was configured.  V
 </VirtualHost>
 ```
 
-Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows its usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor to load the above URL.
+Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows its usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor with read/write permissions.
 
 ```bash
 127.0.0.1 demo.acme.com
@@ -41,7 +41,7 @@ Additionally, it may be necessary to add an entry in the servers `hosts` file. O
 
 ### .htaccess File
 
-Laminas MVC along with its ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and artifacts that have been defined in a `route stack` object. The route stack is a merged set of `routes`, collated from each resources 'module.config.php` file.  There are a couple additional configurations required to support dynamic autoloading. 
+Laminas MVC along with ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and other artifacts that have been defined in the `route stack` object. The route stack is a merged set of individual `routes` collated from each resources 'module.config.php` file. 
 
 1. Confirm Apache (usually in httpd.conf) has enabled rewrite module
 ..* LoadModule rewrite_module modules/mod_rewrite.so
@@ -101,6 +101,10 @@ The above should copy/paste into the `composer.json` files "autoload": {...} nod
 
 ## References
 
+[Laminas](https://getlaminas.org/): Enterprise Software framework and components.
+[PHP](https:php.net): General Purpose programming language for web development.
+[Composer](https://getcomposer.org/): Package and dependency management for PHP projects.
+[whitepatchcode.com](whitepatchcode.com): Project website and knowledgebase
 
 
 
