@@ -8,11 +8,11 @@ This project is an example of a capability often requested for enterprise softwa
 
 ## MVC Architecture
 
-The project is based on a Model-View-Controller(MVC) architecture and implements [Laminas MVC](https://docs.laminas.dev/mvc/) framework (among others)to leverages abstraction, dependency injection, dynamic routing & autoload. MVC ensures `separation of concern` and promotes clean code resulting in stable operation and feature/code logevity.
+The project is based on a Model-View-Controller(MVC) architecture and implements [Laminas MVC](https://docs.laminas.dev/mvc/) framework (among others)to leverages abstraction, dependency injection, dynamic routing & autoload. MVC ensures `separation of concern` and promotes clean code resulting in stable operation and feature/code longevity.
 
 ## Prerequisites & Setup
 
-This project was created for demonstration purpose and configured to serve from an instance of [Apache2](https://httpd.apache.org/) running localhost with a configured VirtualHost.  It can however be deployed from containers(Docker), cloud services(AWS) or dedicated web servers.  The following outlines some basic configuration in order install and run the project locally.
+This project was created for demonstration purposes and configured to serve from an instance of [Apache2](https://httpd.apache.org/) running localhost with a configured VirtualHost.  It can however be deployed from containers(Docker), cloud services(AWS) or dedicated web servers.  The following outlines some basic configuration in order install and run the project locally.
 
 ### VirtualHost
 
@@ -33,7 +33,7 @@ The following is a reference for how the projects VirtualHost was configured.  V
 </VirtualHost>
 ```
 
-Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows its usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor with read/write permissions.
+Additionally, it may be necessary to add an entry in the servers `hosts` file. On Mac that file is `/etc/hosts`, and for Windows it’s usually `c:\windows\system32\drivers\etc\hosts`. Add the following line to hosts file using any text editor with read/write permissions.
 
 ```bash
 127.0.0.1 demo.acme.com
@@ -41,7 +41,7 @@ Additionally, it may be necessary to add an entry in the servers `hosts` file. O
 
 ### .htaccess File
 
-Laminas MVC along with ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and other artifacts that have been defined in the `route stack` object. The route stack is a merged set of individual `routes` collated from each resources 'module.config.php` file. 
+Laminas MVC along with ModuleManager and ServiceManager use Configuration Management to dynamically load views, controllers and other artifacts that have been defined in the `route stack` object. The route stack is a merged set of individual `routes` collated from each resources’ 'module.config.php` file. 
 
 1. Confirm Apache (usually in httpd.conf) has enabled rewrite module
 ..* LoadModule rewrite_module modules/mod_rewrite.so
@@ -49,7 +49,7 @@ Laminas MVC along with ModuleManager and ServiceManager use Configuration Manage
 2. Confirm Apache has enabled Access File
 ..* AccessFileName .htaccess
 
-3. Add the following directives to the an .htaccess file under any public/ directory that's comfigured for autoloading
+3. Add the following directives to the .htaccess file under any public/ directory that's configured for autoloading
 
 ```bash
 RewriteEngine On
@@ -72,7 +72,7 @@ For more details on Autoloading, see [Laminas Autoloader](https://docs.laminas.d
 
 ## Composer Package Manager and Autoloading
 
-The final configuration task initializes the project and installs the framework components using Composer package manager. Dependencies are defined in a `composer.json` file which is not included in this repo. However the required dependencies are listed below. This way another package dependency solution can be cleanly install without Composer artifacts.  To walk through installing this project using Composer, refer to [Composer Basic Usage](https://getcomposer.org/doc/01-basic-usage.md).
+The final configuration task initializes the project and installs the framework components using Composer package manager. Dependencies are defined in a `composer.json` file which is not included in this repo. However, the required dependencies are listed below. This way another package dependency solution can be cleanly installed without Composer artifacts.  To walk through installing this project using Composer, refer to [Composer Basic Usage](https://getcomposer.org/doc/01-basic-usage.md).
 
 1. Laminas & PHP Dependencies
 
@@ -105,6 +105,7 @@ The above should copy/paste into the `composer.json` files "autoload": {...} nod
 2. [PHP](https:php.net): General Purpose programming language for web development.
 3. [Composer](https://getcomposer.org/): Package and dependency management for PHP projects.
 4. [whitepatchcode.com](whitepatchcode.com): Project website and knowledgebase
+
 
 
 
