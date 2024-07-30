@@ -101,10 +101,10 @@ The above should copy/paste into the `composer.json` files "autoload": {...} nod
 
 ## References
 
-[Laminas](https://getlaminas.org/): Enterprise Software framework and components.
-[PHP](https:php.net): General Purpose programming language for web development.
-[Composer](https://getcomposer.org/): Package and dependency management for PHP projects.
-[whitepatchcode.com](whitepatchcode.com): Project website and knowledgebase
+1. [Laminas](https://getlaminas.org/): Enterprise Software framework and components.
+2. [PHP](https:php.net): General Purpose programming language for web development.
+3. [Composer](https://getcomposer.org/): Package and dependency management for PHP projects.
+4. [whitepatchcode.com](whitepatchcode.com): Project website and knowledgebase
 
 
 
