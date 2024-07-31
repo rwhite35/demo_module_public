@@ -99,6 +99,13 @@ The above should copy/paste into the `compose.json` files "require": {...} node.
 The above should copy/paste into the `composer.json` files "autoload": {...} node.
 
 
+## Application Initialized
+
+The following view should load assuming the above configurations are used and/or modified with install specific values.
+
+[image]: https://github.com/rwhite35/demo_module_public/raw/main/public/images/expected_view.jpeg "Module View"
+
+
 ## References
 
 1. [Laminas](https://getlaminas.org/): Enterprise Software framework and components.

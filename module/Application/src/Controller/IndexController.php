@@ -1,17 +1,16 @@
 <?php
-namespace Acme\Controller;
+namespace Application\Controller;
 
 use Laminas\Mvc\Controller\AbstractActionController;
-
 use Laminas\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
     // URL http://demo.acme.com:8888/acme_public 
-    // maps to Acme\Controller\IndexController::indexAction function
+    // maps to Application\Controller\IndexController::indexAction function
     //
     public function indexAction() {
-        print("Acme::IndexController working...");
+        print("Application::IndexController working...");
         return new ViewModel();
     }
 

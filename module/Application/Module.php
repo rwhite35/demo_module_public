@@ -14,8 +14,9 @@ class Module
         $eventManager = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
-        printf("App.onBootstrap() has moduleRouteListener with attached event ");
-        print(var_dump($moduleRouteListener));
+
+        printf("App.onBootstrap() initialized moduleRouteListener.\n");
+        // print(var_dump($moduleRouteListener));
     }
 
     public function getConfig()

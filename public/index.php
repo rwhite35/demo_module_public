@@ -6,7 +6,7 @@ use Laminas\Stdlib\ArrayUtils;
  * Display all errors while in local development
  */
 if(substr($_SERVER['SERVER_ADDR'], 0,3) == 127) {
-    // printf("server address is %s",$_SERVER['SERVER_ADDR']);
+    printf("initializing App from server address: %s;\n",$_SERVER['SERVER_ADDR']);
     // error_reporting(E_ALL);
     // ini_set("display_errors", '1');
 }
@@ -42,7 +42,7 @@ $appConfig = require __DIR__ . '/../config/application.config.php';
 if (file_exists(__DIR__ . '/../config/development.config.php')) {
     $appConfig = ArrayUtils::merge($appConfig, require __DIR__ . '/../config/development.config.php');
 }
-printf("acme_public/index appConfigs: %s", var_dump($appConfig));
+// printf("application.config appConfigs: %s", var_dump($appConfig));
 
 // Run the application!
 Application::init($appConfig)->run();

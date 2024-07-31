@@ -31,13 +31,15 @@ return [
         'doctype'                  => 'HTML5',
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
+
+        // application and shared view resources
         'template_map' => [
-            // layout/layout is common for all modules.
             'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            'application/index' => __DIR__ . '/../view/application/index.phtml',
+            'application/index'       => __DIR__ . '/../view/application/index.phtml',
             'error/404'               => __DIR__ . '/../view/error/404.phtml',
             'error/index'             => __DIR__ . '/../view/error/index.phtml',
         ],
+
         'template_path_stack' => [
             __DIR__ . '/../view',
         ],

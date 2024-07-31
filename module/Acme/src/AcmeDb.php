@@ -1,19 +1,19 @@
 <?php
-namespace Acme\Utilities;
+namespace Acme;
 /**
- * Acme\Utilities | vendor/acme/utilities/src/AcmeDb.php
- * @package Acme\Utilities
+ * Acme | Acme\AcmeDb.php
+ * @package Acme
  * @subpackage AcmeDb 
  * @author ron white, ronwhite562@gmail.com
  * @version 1.0
- * @since 2018-04-19
+ * @since 2024-04-19
  */
 
 
  /** 
   * AcmeDb
-  * This package was created to use a custom ODBC dsn as required.  
-  * The ZF3 Db/Adapter may not handle all the Acme Logistics data store requirements.
+  * for custom ODBC dsn as required, or when Laminas-Db doesn't
+  * support some specific db connection.  
   *
   * Additional methods will be added as different data sources are
   * added to the system. Uses PHP's standard PDO implmentation.

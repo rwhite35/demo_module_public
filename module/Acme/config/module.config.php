@@ -27,9 +27,11 @@ return [
     'controllers' => [
         'aliases' => [
             'index' => Controller\IndexController::class,
+            // 'orders'  => Controller\Orders::class,
         ],
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
+            // Controller\OrdersController::class => InvokableFactory::class,
         ],
     ],
 
@@ -55,16 +57,13 @@ return [
         'doctype'                  => 'HTML5',
         'display_not_found_reason' => false,
         'display_exceptions'       => false,
-        // 'not_found_template'       => 'error/404',
-        // 'exception_template'       => 'error/index',
 
-        // layout/layout is common for all modules
+        // Applications layout.phtml is common to all modules
         'template_map' => [
-            // 'layout/layout'           => __DIR__ . '/../view/layout/layout.phtml',
-            // 'application/index/index' => __DIR__ . '/../view/application/index/index.phtml',
-            // 'error/404'               => __DIR__ . '/../view/error/404.phtml',
-            // 'error/index'             => __DIR__ . '/../view/error/index.phtml',
+            'layout/layout'         => __DIR__ . '/../../Application/view/layout/layout.phtml',
+            // 'index/index'           => __DIR__ . '/../view/index/index.phtml',
         ],
+        // Acme module specific view resources
         'template_path_stack' => [
             'acme' => __DIR__ . '/../view',
         ],
