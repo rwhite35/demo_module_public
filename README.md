@@ -103,7 +103,7 @@ The above should copy/paste into the `composer.json` files "autoload": {...} nod
 
 The following view should load assuming the above configurations are used and/or modified with install specific values.
 
-[image]: https://github.com/rwhite35/demo_module_public/blob/main/public/images/expected_view.jpg "Module View"
+![view](https://github.com/rwhite35/demo_module_public/blob/main/public/images/expected_view.jpg)
 
 
 ## References
